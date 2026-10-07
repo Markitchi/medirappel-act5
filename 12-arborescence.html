@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>Arborescence de navigation</title>
+<link rel="stylesheet" href="design-system.css">
+<style></style>
+</head><body>
+<div class="sheet">
+  <div class="sheet-head">
+    <span class="sheet-num">12</span>
+    <span class="sheet-title">Arborescence de navigation</span>
+    <span class="sheet-route">10 écrans · 4 onglets racine</span>
+  </div>
+  <div class="sheet-brand">MediRappel — dossier de conception</div>
+  <div class="sheet-body"><div class="doc two" style="flex:1;min-width:0">
+    <h4>Schéma de l'arborescence de navigation</h4>
+    <p>Dix écrans, quatre onglets racine et deux écrans hors session. La profondeur
+    maximale est de trois niveaux ; aucune action n'est accessible par un chemin
+    dépassant trois gestes. Les liens profonds fonctionnent depuis une notification
+    locale, donc également <b>sans réseau</b>.</p>
+    <div class="tree two-col" style="display:flex;gap:5mm;background:#EFF5F5;
+    border:1px solid #BEC8C9;border-radius:8px;padding:3.5mm 4mm;margin-bottom:4mm">
+      <div><span class="c1">MediRappel</span> — application hors ligne, 4 onglets racine
+
+<span class="c3">HORS SESSION</span>
+├── <span class="c1">01  Connexion</span> .............................. /connexion      premier lancement · déconnexion
+│   └── <span class="c1">02  Inscription</span> ....................... /inscription    lien depuis 01
+│       ├── Étape 1 / 2 — identité, e-mail, mot de passe
+│       └── Étape 2 / 2 — profil médical (allergies, Commune)
+│             └→ <span class="c1">03  Accueil</span>  · ouverture de session automatique
+
+<span class="c3">ONGLETS RACINE</span>
+├── <span class="c1">03  Accueil</span> ............................... /accueil        <span class="c2">[1]</span>
+│   ├── Carte « dose manquée » ............. feuille de rattrapage (modale)
+│   ├── Carte rendez-vous / ordonnance ...... → 08 · → 05
+│   ├── Cible « 06  Mes prises » ........... → <span class="c2">06</span>
+│   └── Bouton flottant « Scanner » ........ → numérisation → <span class="c2">05</span>
+│
+├── <span class="c1">04  Ordonnances</span> ............................ /ordonnances     <span class="c2">[2]</span>
+│   ├── Recherche + filtres Actives / Terminées
+│   ├── <span class="c2">05  Détail ordonnance</span> ................. /ordonnances/{id}
+│   │   ├── Feuille « Partager au médecin » (modale)
+│   │   │    ├── QR code local · hors ligne
+│   │   │    ├── Export PDF · local        ├── Impression · locale
+│   │   │    └── Lien de partage · réseau requis, expire 24 h
+│   │   ├── Modifier la posologie
+│   │   └── Marquer comme terminée
+│   └── Bouton flottant « Scanner » ........ → numérisation → <span class="c2">05</span> (création)
+│
+├── <span class="c1">06  Mes prises</span> ............................. /prises
+│   ├── Interrupteur par médicament · réglage d'un créneau
+│   └── Bloc Rappels ........................ → <span class="c2">10  Réglages</span>
+│
+├── <span class="c1">07  Rendez-vous</span> ............................ /rendez-vous     <span class="c2">[3]</span>
+│   ├── Onglet « À venir » / « Passés » .... état vide documenté
+│   ├── Tap sur une carte .................. → <span class="c2">08</span>
+│   └── Bouton flottant « Ajouter » ........ → <span class="c2">08</span> (création)
+│
+</div><div>├── <span class="c1">09  Historique</span> ............................. /historique      <span class="c2">[4]</span>
+│   ├── Filtres 7 j / 30 j / tout · export PDF local
+│   └── Feuille de partage .................. même composant que <span class="c2">05</span>
+
+<span class="c3">ÉCRAN HORS ONGLET</span>
+├── <span class="c1">08  Détail rendez-vous</span> ..................... /rendez-vous/{id}
+│   ├── Actions rapides : itinéraire · appel · partage
+│   ├── Activation agenda (facultative)
+│   └── Supprimer ............................ confirmation obligatoire
+│
+└── <span class="c1">10  Réglages</span> ................................ /reglages
+    ├── Profil et déconnexion ............... → <span class="c1">01  Connexion</span>
+    ├── Mode hors ligne · Wi-Fi · stockage · confidentialité · verrouillage
+    └── Effacer les données .................. confirmation obligatoire</div></div>
+
+    <div style="display:flex;gap:6mm">
+      <div style="flex:1.35">
+        <h4>Table des routes</h4>
+        <table style="width:100%;border-collapse:collapse;font:400 7.2pt/1.3 var(--font)">
+          <tr style="background:#E9EFEF">
+            <th style="text-align:left;padding:1.1mm 1.6mm;font:700 6.2pt/1 var(--font);
+            letter-spacing:.4px;text-transform:uppercase;color:#00696D">N°</th>
+            <th style="text-align:left;padding:1.1mm 1.6mm;font:700 6.2pt/1 var(--font);
+            letter-spacing:.4px;text-transform:uppercase;color:#00696D">Écran</th>
+            <th style="text-align:left;padding:1.1mm 1.6mm;font:700 6.2pt/1 var(--font);
+            letter-spacing:.4px;text-transform:uppercase;color:#00696D">Route</th>
+            <th style="text-align:left;padding:1.1mm 1.6mm;font:700 6.2pt/1 var(--font);
+            letter-spacing:.4px;text-transform:uppercase;color:#00696D">Points d'entrée</th>
+            <th style="text-align:left;padding:1.1mm 1.6mm;font:700 6.2pt/1 var(--font);
+            letter-spacing:.4px;text-transform:uppercase;color:#00696D">Prérequis</th>
+          </tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">01</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Connexion</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/connexion</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Sortie de session · premier lancement</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">aucune</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">02</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Inscription</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/inscription</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Lien depuis 01</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">aucune</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">03</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Accueil</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/accueil</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Onglet 1 · après inscription</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">04</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Ordonnances</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/ordonnances</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Onglet 2 · notification locale</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">05</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Détail ordonnance</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/ordonnances/{id}</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Carte · recherche · numérisation</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">06</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Mes prises</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/prises</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Cible « Mes prises » de l'accueil</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">07</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Rendez-vous</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/rendez-vous</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Onglet 3 · notification locale</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">08</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Détail rendez-vous</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/rendez-vous/{id}</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Carte · bouton flottant · lien profond</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">09</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Historique</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/historique</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Onglet 4</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr><tr><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">10</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-weight:600">Réglages</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9;font-family:'Cascadia Code',monospace;font-size:7.5pt">/reglages</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">Icône de l'accueil · profil</td><td style="padding:1.3mm 2mm;border-bottom:.3mm solid #BEC8C9">session</td></tr></table>
+      </div>
+      <div style="flex:1">
+        <h4>Barre de navigation inférieure</h4>
+        <div style="background:#E9EFEF;border:1px solid #BEC8C9;border-radius:10px;
+        padding:2.5mm;display:flex;margin-bottom:3.5mm">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;
+          gap:1.2mm;padding:1.6mm 0;background:#CCE8E9;border-radius:999px;color:#051F21;">
+          <span style="background:#051F21;border-radius:999px;padding:1mm 2.6mm;">
+          <span style="color:#9CF1F5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.6 12 3.2l9 7.4"/><path d="M5.6 9.4V19a1.6 1.6 0 0 0 1.6 1.6h9.6a1.6 1.6 0 0 0 1.6-1.6V9.4"/></svg></span></span>
+          <span style="font:500 6.2pt/1 var(--font)">Accueil</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;
+          gap:1.2mm;padding:1.6mm 0;color:#3F4849;">
+          <span style="background:">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.2H7.2A2.2 2.2 0 0 0 5 5.4v13.2a2.2 2.2 0 0 0 2.2 2.2h9.6a2.2 2.2 0 0 0 2.2-2.2V8z"/><polyline points="14 3.2 14 8 19 8"/><line x1="8.6" y1="12.6" x2="15.4" y2="12.6"/><line x1="8.6" y1="16.2" x2="13" y2="16.2"/></svg></span>
+          <span style="font:500 6.2pt/1 var(--font)">Ordonnances</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;
+          gap:1.2mm;padding:1.6mm 0;color:#3F4849;">
+          <span style="background:">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="5" width="17.6" height="16" rx="2.2"/><line x1="3.2" y1="9.8" x2="20.8" y2="9.8"/><line x1="8" y1="2.8" x2="8" y2="6.4"/><line x1="16" y1="2.8" x2="16" y2="6.4"/></svg></span>
+          <span style="font:500 6.2pt/1 var(--font)">Rendez-vous</span></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;
+          gap:1.2mm;padding:1.6mm 0;color:#3F4849;">
+          <span style="background:">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3.6 5.6 3.6 10 8 10"/><path d="M4.2 10a8.4 8.4 0 1 1 -.4 4.6"/><polyline points="12 7.4 12 12 15.4 13.8"/></svg></span>
+          <span style="font:500 6.2pt/1 var(--font)">Historique</span></div>
+        </div>
+
+        <h4>Règles de navigation</h4>
+        <ul>
+          <li>La barre inférieure est visible sur les quatre onglets racine ;
+          elle disparaît sur les écrans de formulaire et les feuilles modales.</li>
+          <li>Le retour utilise <b>la flèche et le geste système</b>, avec la même
+          cible dans les deux cas.</li>
+          <li>Une sortie de formulaire non enregistrée déclenche un avertissement.</li>
+          <li>Toute action irréversible (suppression, effacement) exige une
+          confirmation explicite.</li>
+          <li>Aucun écran n'est accessible par <code>retour arrière</code> depuis un
+          état vide : la seule sortie est l'action proposée.</li>
+        </ul>
+      </div>
+    </div>
+    </div></div>
+</div>
+</body></html>

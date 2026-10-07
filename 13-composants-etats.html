@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>Composants, états et thème sombre</title>
+<link rel="stylesheet" href="design-system.css">
+<style></style>
+</head><body>
+<div class="sheet">
+  <div class="sheet-head">
+    <span class="sheet-num">13</span>
+    <span class="sheet-title">Composants, états et thème sombre</span>
+    <span class="sheet-route">M3 · 4 états · WCAG AA</span>
+  </div>
+  <div class="sheet-brand">MediRappel — dossier de conception</div>
+  <div class="sheet-body"><div class="doc " style="flex:1;min-width:0">
+    <h4>Matrice des états de composants</h4>
+    <p>Chaque composant interactif est spécifié dans les quatre états exigés.
+    L'état <b>erreur</b> est toujours accompagné d'un message qui explique
+    <b>comment corriger</b> le problème, jamais d'un simple refus.</p>
+    <div class="state-row" style="border-bottom:1px solid var(--outline)"><div class="state-head">Composant</div><div class="state-head">Normal</div><div class="state-head">Actif</div><div class="state-head">Désactivé</div><div class="state-head">Erreur</div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Champ de saisie</div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border:1px solid #6F797A;border-radius:5px 5px 10px 10px;background:#EFF5F5;position:relative;display:flex;align-items:center;padding:0 7px"><span style="position:absolute;top:-1px;left:8px;font:400 7px/1 var(--font);background:#EFF5F5;padding:0 2px;color:#3F4849">Adresse e-mail</span><span style="font:400 9.5pt/1 var(--font);padding-top:7px">marie.dupont@gmail.com</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border:2px solid #00696D;border-radius:5px 5px 10px 10px;background:#EFF5F5;position:relative;display:flex;align-items:center;padding:0 6px"><span style="position:absolute;top:-3px;left:8px;font:600 7px/1 var(--font);background:#EFF5F5;padding:0 2px;color:#00696D">Adresse e-mail</span><span style="font:400 9.5pt/1 var(--font);padding-top:7px">marie.dupont@gmail.com</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border:1px solid transparent;border-radius:5px 5px 10px 10px;background:#E3E9E9;position:relative;display:flex;align-items:center;padding:0 7px"><span style="position:absolute;top:1px;left:8px;font:400 7px/1 var(--font);color:#7C8586">Confirmer le mot de passe</span><span style="font:400 9.5pt/1 var(--font);padding-top:9px;color:#7C8586">Saisir…</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border:2px solid #BA1A1A;border-radius:5px 5px 10px 10px;background:#FFDAD6;position:relative;display:flex;align-items:center;padding:0 6px"><span style="position:absolute;top:-3px;left:8px;font:600 7px/1 var(--font);background:#FFDAD6;padding:0 2px;color:#BA1A1A">Adresse e-mail</span><span style="font:400 9.5pt/1 var(--font);padding-top:7px;color:#410002">marie.dupont@</span></div></div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Bouton principal</div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#00696D;color:#FFFFFF;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Se connecter</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#00696D;color:#FFFFFF;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font);box-shadow:inset 0 0 0 999px rgba(0,0,0,.16)">Se connecter</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#E3E9E9;color:#7C8586;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Créer mon compte</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#BA1A1A;color:#FFFFFF;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Réessayer</div></div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Bouton secondaire</div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#CCE8E9;color:#051F21;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Enregistrer</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#CCE8E9;color:#051F21;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font);box-shadow:inset 0 0 0 999px rgba(0,0,0,.16)">Se connecter</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#E3E9E9;color:#7C8586;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Créer mon compte</div></div><div class="state-cell" style="padding:3px 5px"><div style="width:100%;height:34px;border-radius:999px;background:#BA1A1A;color:#FFFFFF;border:1.5px solid transparent;display:grid;place-items:center;font:600 8.5pt/1 var(--font)">Réessayer</div></div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Chip de filtre</div><div class="state-cell" style="padding:3px 5px"><span class="chip" style="font-size:9pt;height:26px">Actives · 3</span></div><div class="state-cell" style="padding:3px 5px"><span class="chip on" style="font-size:9pt;height:26px">Toutes · 7</span></div><div class="state-cell" style="padding:3px 5px"><span class="chip" style="font-size:9pt;height:26px;opacity:.5;border-style:dashed">Terminées</span></div><div class="state-cell" style="padding:3px 5px"><span class="badge err" style="font-size:9pt;height:24px">Indisponible</span></div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Interrupteur</div><div class="state-cell" style="padding:3px 5px"><div class="switch"><span class="knob"></span></div></div><div class="state-cell" style="padding:3px 5px"><div class="switch on"><span class="knob"></span></div></div><div class="state-cell" style="padding:3px 5px"><div class="switch disabled"><span class="knob"></span></div></div><div class="state-cell" style="padding:3px 5px"><div style="display:flex;flex-direction:column;align-items:center;gap:2mm"><div class="switch on"><span class="knob"></span></div><span style="font:400 6.5pt/1 var(--font);color:#BA1A1A">non appliqué</span></div></div></div><div class="state-row"><div style="font:600 8pt/1.25 var(--font)">Ligne de dose</div><div class="state-cell" style="padding:3px 5px"><div style="display:flex;align-items:center;gap:5px;width:100%"><div class="lead-ic ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><polyline points="8 12.2 11 15.2 16 9.4"/></svg></div><div style="flex:1;min-width:0"><div style="font:500 8pt/1.2 var(--font);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Metformine 850 mg</div><div style="font:400 7pt/1.2 var(--font);color:var(--on-surface-variant)">1 comprimé</div></div><span class="badge ok" style="font-size:7.5pt;height:17px;padding:0 5px">Prise</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="display:flex;align-items:center;gap:5px;width:100%"><div class="lead-ic due"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><polyline points="12 6.8 12 12 15.6 14"/></svg></div><div style="flex:1;min-width:0"><div style="font:500 8pt/1.2 var(--font);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Metformine 850 mg</div><div style="font:400 7pt/1.2 var(--font);color:var(--on-surface-variant)">1 comprimé</div></div><span class="badge due" style="font-size:7.5pt;height:17px;padding:0 5px">À prendre</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="display:flex;align-items:center;gap:5px;width:100%"><div class="lead-ic" style="width:24px;height:24px;flex:0 0 24px;background:var(--surface-high);color:var(--on-surface-variant)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><polyline points="12 6.8 12 12 15.6 14"/></svg></div><div style="flex:1;min-width:0"><div style="font:500 8pt/1.2 var(--font);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Metformine 850 mg</div><div style="font:400 7pt/1.2 var(--font);color:var(--on-surface-variant)">1 comprimé</div></div><span class="badge " style="font-size:7.5pt;height:17px;padding:0 5px">Planifiée</span></div></div><div class="state-cell" style="padding:3px 5px"><div style="display:flex;align-items:center;gap:5px;width:100%"><div class="lead-ic err"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6 21.6 20.2H2.4z"/><line x1="12" y1="9.6" x2="12" y2="14.2"/><circle cx="12" cy="17.3" r="1" fill="currentColor" stroke="none"/></svg></div><div style="flex:1;min-width:0"><div style="font:500 8pt/1.2 var(--font);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Metformine 850 mg</div><div style="font:400 7pt/1.2 var(--font);color:var(--on-surface-variant)">1 comprimé</div></div><span class="badge err" style="font-size:7.5pt;height:17px;padding:0 5px">Manquée</span></div></div></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:4mm;margin-top:6mm">
+      <div><div style="border:1px solid var(--outline-variant);border-radius:8px;padding:4mm;background:#fff">
+      <div style="font:700 7pt/1 var(--font);color:#00696D;letter-spacing:.6px;margin-bottom:3mm">
+      ÉTAT VIDE</div>
+      <div style="width:38px;height:38px;border-radius:999px;background:#E9EFEF;color:#00696D;
+      display:grid;place-items:center;margin:0 auto 3mm"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="5" width="17.6" height="16" rx="2.2"/><line x1="3.2" y1="9.8" x2="20.8" y2="9.8"/><line x1="8" y1="2.8" x2="8" y2="6.4"/><line x1="16" y1="2.8" x2="16" y2="6.4"/></svg></div>
+      <div style="text-align:center;font:500 9pt/1.3 var(--font);margin-bottom:1.5mm">
+      Aucun rendez-vous à venir</div>
+      <div style="text-align:center;font:400 8pt/1.4 var(--font);color:#3F4849;margin-bottom:3mm">
+      Ajoutez une consultation : vous serez rappelé la veille, même sans réseau.</div>
+      <div style="width:52%;margin:0 auto;border-radius:999px;background:#CCE8E9;color:#051F21;
+      padding:2mm 0;text-align:center;font:600 8pt/1 var(--font)">Ajouter</div></div></div>
+      <div><div style="border:1px solid var(--outline-variant);border-radius:8px;padding:4mm;background:#fff">
+      <div style="font:700 7pt/1 var(--font);color:#00696D;letter-spacing:.6px;margin-bottom:3mm">
+      ÉTAT DE CHARGEMENT</div>
+      <div style="display:flex;gap:2.5mm;align-items:center;margin-bottom:2.5mm">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><polyline points="12 6.8 12 12 15.6 14"/></svg>
+        <span style="font:400 8pt/1.3 var(--font);color:#3F4849">Recherche de l&apos;ordonnance…</span></div>
+      <div style="display:flex;flex-direction:column;gap:2.5mm">
+        <div class="skel skel-card"></div>
+        <div class="skel skel-card" style="opacity:.75"></div>
+        <div class="skel skel-card" style="opacity:.5"></div></div>
+      <div style="height:5px;border-radius:999px;background:#E3E9E9;margin-top:4mm;overflow:hidden">
+        <div style="width:62%;height:100%;background:#00696D;border-radius:999px"></div></div>
+      <div style="font:400 7pt/1.3 var(--font);color:#3F4849;margin-top:2mm">
+      Le squelette annonce la forme du contenu : pas de saut de mise en page.</div></div></div>
+      <div><div style="border:1px solid var(--outline-variant);border-radius:8px;padding:4mm;background:#fff">
+      <div style="font:700 7pt/1 var(--font);color:#00696D;letter-spacing:.6px;margin-bottom:3mm">
+      ÉTAT D&apos;ERREUR</div>
+      <div class="banner err" style="margin-bottom:3mm">
+        <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6 21.6 20.2H2.4z"/><line x1="12" y1="9.6" x2="12" y2="14.2"/><circle cx="12" cy="17.3" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <div><b>Photo illisible.</b> Reprenez l&apos;ordonnance à plat, avec un éclairage
+        suffisant.</div></div>
+      <div style="display:flex;gap:2mm;margin-bottom:3mm">
+        <div style="flex:1;border-radius:999px;background:#BA1A1A;color:#fff;padding:2mm 0;
+        text-align:center;font:600 8pt/1 var(--font)">Réessayer</div>
+        <div style="flex:1;border-radius:999px;border:1.5px solid #6F797A;color:#00696D;
+        padding:2mm 0;text-align:center;font:600 8pt/1 var(--font)">Saisir à la main</div></div>
+      <div class="banner err" style="margin-bottom:0">
+        <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="3" x2="21" y2="21"/><path d="M2.4 8.4a15 15 0 0 1 4.6-3"/><path d="M21.6 8.4a15 15 0 0 0-6.4-3.1"/><path d="M5.8 12a10 10 0 0 1 2.8-1.7"/><path d="M18.2 12a10 10 0 0 0-2.1-1.4"/><path d="M9 15.6a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <div>Sauvegarde impossible : <b>24 Mo disponibles</b> sur l&apos;appareil.</div></div></div></div>
+      <div><div class="darkframe" style="--surface:#101414;--on-surface:#E2E2E2;
+      --surface-low:#191E1E;--surface-container:#222828;--surface-high:#2B3232;
+      --on-surface-variant:#BEC8C9;--outline:#6F797A;--outline-variant:#3A4343;
+      --primary:#4DD9E0;--on-primary:#002021;--primary-container:#00494B;
+      --on-primary-container:#9CF1F5;--secondary-container:#33494A;--on-secondary-container:#CCE8E9">
+      <div class="df-t">THÈME SOMBRE — contraste vérifié</div>
+      <div class="dark-sw">
+        <div class="b" style="background:#101414"></div>
+        <div class="b" style="background:#1C2121"></div>
+        <div class="b" style="background:#4DD9E0"></div>
+        <div class="b" style="background:#FFB4AB"></div></div>
+      <div class="dark-row"><span class="lbl">Texte principal</span>
+        <span style="font:400 8.5pt/1 var(--font);color:#E2E2E2">19,4:1 sur #101414</span></div>
+      <div class="dark-row"><span class="lbl">Texte secondaire</span>
+        <span style="font:400 8.5pt/1 var(--font);color:#BEC8C9">10,1:1 sur #101414</span></div>
+      <div class="dark-row"><span class="lbl">Bouton primaire</span>
+        <span style="font:600 8.5pt/1 var(--font);color:#002021;background:#4DD9E0;
+        padding:1.6mm 4mm;border-radius:999px">Se connecter</span></div>
+      <div class="dark-row" style="margin-bottom:0"><span class="lbl">Erreur</span>
+        <span style="font:400 8.5pt/1 var(--font);color:#FFB4AB">8,7:1 sur #101414</span></div>
+      <div style="font:400 7pt/1.4 var(--font);color:#BEC8C9;margin-top:3mm">
+      Le thème sombre est fourni par Material 3 et activé par le réglage système
+      (écran 10). Aucune image d&apos;ordonnance n&apos;est inversée : seules les
+      surfaces changent.</div></div></div>
+    </div>
+
+    <h4 style="margin-top:6mm">Traitement des états de page</h4>
+    <ul style="padding-left:4mm">
+      <li><b>État vide</b> — illustration sobre, message en une phrase et <b>une seule
+      action</b>. Aucun écran vide n'est un cul-de-sac.</li>
+      <li><b>Chargement</b> — squelette reprenant la forme du contenu final, plus un
+      libellé d'attente ; aucun écran blanc, aucune rotation indefinite.</li>
+      <li><b>Erreur</b> — bandeau explicatif + deux issues (réessayer, faire autrement).
+      Les erreurs <b>hors ligne</b> sont distinguées des erreurs <b>de stockage</b>, qui
+      n'appellent pas la même action.</li>
+      <li><b>Hors ligne</b> — n'est jamais présenté comme une panne : la barre d'état
+      système et le bandeau permanent indiquent le mode actif, pas une anomalie.</li>
+    </ul>
+    </div></div>
+</div>
+</body></html>
